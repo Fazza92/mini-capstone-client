@@ -1,7 +1,9 @@
 <h2><%= @name["title"] %></h2>
-<h3>Price:<%= @recipe["price"] %></h3>
-<h4>Image URL:<%= @recipe["image_url"] %></h4>
-<h4>Description:<%= @recipe["descriptions"] %></h4>
+<h3>Price:<%= @product["formatted"]["price"] %></h3>
+<h3>Tax:<%= @product["formatted"]["tax"] %></h3>
+<h3>Total:<%= @product["formatted"]["total"] %></h3>
+<h4>Image URL:<%= @product["image_url"] %></h4>
+<h4>Description:<%= @product["descriptions"] %></h4>
 <img src="<%= @recipe['image_url'] %>"
 
 <a href="/client/products/<%= @recipe['id'] %>/edit">Edit</a>

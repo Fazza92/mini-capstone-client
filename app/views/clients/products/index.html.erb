@@ -1,5 +1,12 @@
 <%= @products.each do |product| %>
   <h2><% product["title"] %></h2>
+  <% if product["discounted"] %>
+    <h3>Discount Item!</h3>
+  <% else %>
+    <h3>Everyday Value!</h3>
+  <% end %>
+
+  
   <h3>Name:<%= product["name"] %></h3>
   <h4>Price:<%= product["price"] %></h4>
   <h4>Description:<%= product["description"] %></h4>
